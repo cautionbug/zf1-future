@@ -19,24 +19,20 @@
  * @version    $Id$
  */
 
-
 /**
  * @see Zend_Acl
  */
 require_once 'Zend/Acl.php';
-
 
 /**
  * @see Zend_Acl_Role_Interface
  */
 require_once 'Zend/Acl/Role/Interface.php';
 
-
 /**
  * @see Zend_Acl_Resource_Interface
  */
 require_once 'Zend/Acl/Resource/Interface.php';
-
 
 /**
  * @category   Zend
@@ -53,12 +49,17 @@ interface Zend_Acl_Assert_Interface
      * $role, $resource, or $privilege parameters are null, it means that the query applies to all Roles, Resources, or
      * privileges, respectively.
      *
-     * @param  Zend_Acl                    $acl
-     * @param  Zend_Acl_Role_Interface     $role
-     * @param  Zend_Acl_Resource_Interface $resource
-     * @param  string                      $privilege
+     * @param Zend_Acl                    $acl
+     * @param Zend_Acl_Role_Interface     $role
+     * @param Zend_Acl_Resource_Interface $resource
+     * @param string|null                 $privilege
+     *
      * @return boolean
      */
-    public function assert(Zend_Acl $acl, Zend_Acl_Role_Interface $role = null, Zend_Acl_Resource_Interface $resource = null,
-                           $privilege = null);
+    public function assert (
+        Zend_Acl $acl,
+        Zend_Acl_Role_Interface $role = null,
+        Zend_Acl_Resource_Interface $resource = null,
+        ?string $privilege = null
+    ) : bool;
 }
