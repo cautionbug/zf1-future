@@ -36,7 +36,7 @@
         "exclude": [ "/demos", "/documentation", "/tests" ]
     },
     "replace": {
-        "zendframework/zendframework1": ">=1.12.20"
+        "zendframework/zendframework1": "~1.12.20"
     },
     "scripts": {
         "lint": "parallel-lint --exclude vendor --exclude tests/Zend/Loader/_files/ParseError.php .",

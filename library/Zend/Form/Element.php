@@ -83,7 +83,7 @@ class Zend_Form_Element implements Zend_Validate_Interface
      * Element description
      * @var string
      */
-    protected $_description;
+    protected $_description = '';
 
     /**
      * Should we disable loading the default decorators?

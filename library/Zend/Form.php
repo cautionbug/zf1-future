@@ -878,11 +878,11 @@ class Zend_Form implements Iterator, Countable, Zend_Validate_Interface
     /**
      * Get name attribute
      *
-     * @return null|string
+     * @return string
      */
     public function getName()
     {
-        return $this->getAttrib('name');
+        return (string) $this->getAttrib('name');
     }
 
     /**
@@ -967,7 +967,7 @@ class Zend_Form implements Iterator, Countable, Zend_Validate_Interface
      */
     public function getDescription()
     {
-        return $this->_description;
+        return $this->_description ?? '';
     }
 
     /**

@@ -147,7 +147,7 @@ class Zend_Controller_Action_HelperBroker_PriorityStack implements IteratorAggre
         }
 
         if (array_key_exists($helper->getName(), $this->_helpersByNameRef)) {
-            // remove any object with the same name to retain BC compailitbility
+            // remove any object with the same name to retain BC compatibility
             // @todo At ZF 2.0 time throw an exception here.
             $this->offsetUnset($helper->getName());
         }
